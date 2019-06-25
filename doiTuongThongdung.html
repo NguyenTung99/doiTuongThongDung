@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đối tượng thông dụng</title>
+</head>
+<body>
+<script>
+
+
+    // làm việc với date
+
+    let birdday = new Date(1990, 9, 9, 12, 00, 00);
+    let thisYear = new Date(2019, 6, 25, 11, 8, 00);
+    let tuoi = thisYear.getFullYear() - birdday.getFullYear();
+    alert('số tuổi của tôi là:' + tuoi);
+    let thang = thisYear.getMonth() - birdday.getMonth() + 12 * tuoi;
+    alert('số tháng của tôi là:' + thang);
+    let ngay = thisYear.getDate() - birdday.getDate() + 30 * thang;
+    alert('số ngày của tôi là:' + ngay);
+    let gio = thisYear.getHours() - birdday.getHours() + 24 * ngay;
+    alert('số giờ của tôi là:' + gio);
+    let phut = thisYear.getMinutes() - birdday.getMinutes() + 60 * gio;
+    alert('số phút của tôi là:' + phut);
+    let giay = thisYear.getSeconds() - birdday.getSeconds() + 60 * phut;
+    alert('số giây của tôi là:' + giay);
+
+    // làm việc với match
+    let random = Math.floor(Math.random() * 10);
+    alert(random);
+    let ngauNhien = Math.floor(Math.random() * 400);
+    alert(ngauNhien);
+    let so = Math.floor((Math.random() * 100) + 50);
+    alert(so);
+
+
+    let min = Math.min(5, 7, 2, 9);
+    alert(min);
+    let max = Math.max(5, 7, 2, 9);
+    alert(max);
+
+    let luyThua = Math.pow(53,2);
+    alert(luyThua);
+
+    //Làm việc với đối tượng String
+
+    let input =  "Tôi yêu ngôn ngữ lập trình Javascript";
+    let ketQua = input.match(/a/g);
+    alert(ketQua.length);
+    let tachChuoi = input.split(" ");
+    alert(tachChuoi);
+    alert(tachChuoi.length);
+    let doiChu = input.replace(/Javascript/, "Typescript");
+    alert(doiChu);
+
+
+</script>
+</body>
+</html>
